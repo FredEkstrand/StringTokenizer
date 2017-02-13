@@ -1,0 +1,49 @@
+
+String tokenizer tests
+
+1. Test Count call for correct calculated number of tokens.
+	a. With default delimiters.
+	
+2. basic test with defined delimiters.
+	a. With defined delimiters check for correct calculated number of tokens.
+	b. With this test also check Count return value.
+	
+3. NextToken call tests
+	a. When end of string is reached pass a null.
+	b. Give new delimiters and check if parsing correctly with given test string.
+	
+4. TokensToList call tests
+	a. Check that all the tokens are returned
+	b. Check that internal position is reseted back to original position before call.
+	
+5. HasMoreTokens
+	a. Check if its returns all calculated number of tokens.
+
+6. Reset call tests.
+	a. Reset before starting tokenizing should have no affect.
+	b. Reset at some random chosen point should start back at the beginning.
+	c. Reset at the end of tokenization should set back to the beginning. <- able to run twice.
+
+7. Enumeration tests
+	a. Foreach loop test returns all tokens calculated.
+
+8. Delimiters call should return a string of delimiters as defined.
+
+9. IsReturnDelimiters should return proper t/f value 
+
+10. Change token source. This should reset the tokenizer internal settings to start from the beginning.
+	a. Change string to be tokenized after initialization with a given string.
+	b. Change string to be tokenized after random point in tokenization of original string. This should start returning tokens from the new string.
+	c. Change string to be tokenized after completion of originally given string has been tokenized.
+	d. Return string is given string during initialization.
+	e. Return string is same as given string to be tokenized in a,b,c scenarios.
+
+11. StringTokenizer constructor test.
+	a. With no given string with default delimiters.
+	b. With given string and default delimiters.
+	c. With no given string but with defined delimiters. <- ??
+	d. With given starting string and defined delimiters.
+	e. With given starting string and default delimiters with return delimiters.
+	f. With no given string and default delimiters with return delimiters.
+	
+	

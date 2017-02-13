@@ -1,0 +1,6 @@
+C:\SoftwareProjects\StringTokenizer\bin\Release\StringTokenizer.dll
+C:\SoftwareProjects\StringTokenizer\bin\Release\StringTokenizer.pdb
+C:\SoftwareProjects\StringTokenizer\obj\Release\StringTokenizer.dll
+C:\SoftwareProjects\StringTokenizer\obj\Release\StringTokenizer.pdb
+C:\SoftwareProjects\StringTokenizer\bin\Release\System.Net.Http.dll
+C:\SoftwareProjects\StringTokenizer\bin\Release\System.Net.Http.xml
