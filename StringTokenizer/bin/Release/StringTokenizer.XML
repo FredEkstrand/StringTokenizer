@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StringTokenizer</name>
+    </assembly>
+    <members>
+        <member name="T:Ekstrand.Text.StringTokenizer">
+            <summary>
+            StringTokenizer equivalent to the JAVA version.
+            </summary>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.#ctor">
+            <summary>
+            Initialize an instance of StringTokenizer
+            </summary>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.#ctor(System.String)">
+            <summary>
+            Initialize an instance of StringTokenizer with a given string using default delimiters.
+            </summary>
+            <param name="str">String to be tokenized.</param>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.#ctor(System.String,System.String)">
+            <summary>
+            Initialize an instance of StringTokenizer with a given string using defined delimiters.
+            </summary>
+            <param name="str">String to be tokenized.</param>
+            <param name="delim">String defined delimiters use to tokenized the given string</param>
+            <remarks>String delimiters would be evaluate each character as separate delimiters to tokenize a given string.</remarks>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Initialize an instance of StringTokenizer with a given string, defined string delimiters, and return delimiters
+            </summary>
+            <param name="str">String to be tokenized.</param>
+            <param name="delim">String defined delimiters use to tokenized the given string</param>
+            <param name="retDelims">Boolean When true would return each delimiter as tokens otherwise the delimiters would not be returned. </param>
+            <remarks>String delimiters would be evaluate each character as separate delimiters to tokenize a given string.</remarks>
+        </member>
+        <member name="P:Ekstrand.Text.StringTokenizer.StringSource">
+            <summary>
+            The string to be tokenized
+            </summary>
+        </member>
+        <member name="P:Ekstrand.Text.StringTokenizer.Delimiters">
+            <summary>
+            The delimiters to be used to tokenized a string.
+            </summary>
+        </member>
+        <member name="P:Ekstrand.Text.StringTokenizer.IsReturnDelimiters">
+            <summary>
+            If true, then the delimiter characters are also returned as tokens.
+            </summary>
+        </member>
+        <member name="P:Ekstrand.Text.StringTokenizer.HasMoreTokens">
+            <summary>
+            Tests if there are more tokens available to be returned.
+            </summary>
+            <returns>Returns true if and only if there is at least one token in the 
+            string after the current position otherwise false.</returns>
+        </member>
+        <member name="P:Ekstrand.Text.StringTokenizer.Count">
+            <summary>
+            The number of tokens that would be generated.
+            </summary>
+            <returns>Return the number of calculated tokens that would be generated.</returns>
+        </member>
+        <member name="P:Ekstrand.Text.StringTokenizer.Current">
+            <summary>
+             Gets the current element in the collection (Inherited from IEnumerator.)
+            </summary>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.NextToken">
+            <summary>
+            The next token from the given string. 
+            </summary>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.NextToken(System.String)">
+            <summary>
+            The next token from the given string using the given defined delimiter.
+            </summary>
+            <param name="delim">String delimiter to be use to generate this next token and on wards.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.TokensToArray">
+            <summary>
+            Return an array of tokens based on current set of delimiters.
+            </summary>
+            <returns>String array of tokens.</returns>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.TokensToList">
+            <summary>
+            Return a list of tokens based on current set of delimiters.
+            </summary>
+            <returns>Return List string tokens.</returns>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.ResetTokenizer">
+            <summary>
+            Reset the StringTokenizer to its starting position and set the delimiters to its default values.
+            </summary>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.MoveNext">
+            <summary>
+            Advances the enumerator to the next element of the collection.(Inherited from IEnumerator.)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.Reset">
+            <summary>
+            Sets the enumerator to its initial position, which is before the first element in the collection.(Inherited from IEnumerator.)
+            </summary>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.GetEnumerator">
+            <summary>
+             Returns an enumerator that iterates through a collection (Inherited from IEnumerable).
+            </summary>
+            <returns>Return enumerator.</returns>
+        </member>
+        <member name="M:Ekstrand.Text.StringTokenizer.NextTokenInternal">
+            <summary>
+            Return the next token based on current delimiters.
+            </summary>
+            <returns>Return string token.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Count property" Url="html/8a6bc354-5d34-45ef-16f3-412a8d727ed3.htm" />
+  <HelpKINode Title="Current property" Url="html/17a9498d-7602-c8cb-2a27-781dae1a3270.htm" />
+  <HelpKINode Title="Delimiters property" Url="html/6b092fb3-fd22-262a-9563-1a0a43d66b4b.htm" />
+  <HelpKINode Title="Ekstrand.Text namespace" Url="html/233013fb-1675-f282-f24e-d384c8e54c25.htm" />
+  <HelpKINode Title="Ekstrand.Text.StringTokenizer class" Url="html/8acc0c79-7d71-323b-c2f4-15e3e017c597.htm" />
+  <HelpKINode Title="GetEnumerator method" Url="html/91e75c41-2ec0-136e-e396-12875392d73c.htm" />
+  <HelpKINode Title="HasMoreTokens property" Url="html/5255e1e4-a339-b899-ddf4-66385d5e3762.htm" />
+  <HelpKINode Title="IsReturnDelimiters property" Url="html/fafb5180-0347-6a66-bda3-3a99807a29a5.htm" />
+  <HelpKINode Title="MoveNext method" Url="html/4fce62dd-1f14-5da8-23df-d4abcba5112f.htm" />
+  <HelpKINode Title="NextToken method" Url="html/485ca991-104b-dc68-4481-632ea55bb9e0.htm" />
+  <HelpKINode Title="Reset method" Url="html/08cbf63e-8512-7b6c-9e69-460f026474b1.htm" />
+  <HelpKINode Title="ResetTokenizer method" Url="html/9348a601-ebcb-0136-27e5-882e457eca63.htm" />
+  <HelpKINode Title="StringSource property" Url="html/23c6270f-183a-ce1f-bbad-6849c6965838.htm" />
+  <HelpKINode Title="StringTokenizer class">
+    <HelpKINode Title="StringTokenizer Class" Url="html/8acc0c79-7d71-323b-c2f4-15e3e017c597.htm" />
+    <HelpKINode Title="about StringTokenizer class" Url="html/8acc0c79-7d71-323b-c2f4-15e3e017c597.htm" />
+    <HelpKINode Title="constructor" Url="html/203457e8-99fa-3b39-c1be-38f6c35a0c4e.htm" />
+    <HelpKINode Title="methods" Url="html/557ae45a-b325-4d08-2e79-933f5f69d728.htm" />
+    <HelpKINode Title="properties" Url="html/b1ff79e7-c527-4574-e436-51de610bc874.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StringTokenizer.Count property" Url="html/8a6bc354-5d34-45ef-16f3-412a8d727ed3.htm" />
+  <HelpKINode Title="StringTokenizer.Current property" Url="html/17a9498d-7602-c8cb-2a27-781dae1a3270.htm" />
+  <HelpKINode Title="StringTokenizer.Delimiters property" Url="html/6b092fb3-fd22-262a-9563-1a0a43d66b4b.htm" />
+  <HelpKINode Title="StringTokenizer.GetEnumerator method" Url="html/91e75c41-2ec0-136e-e396-12875392d73c.htm" />
+  <HelpKINode Title="StringTokenizer.HasMoreTokens property" Url="html/5255e1e4-a339-b899-ddf4-66385d5e3762.htm" />
+  <HelpKINode Title="StringTokenizer.IsReturnDelimiters property" Url="html/fafb5180-0347-6a66-bda3-3a99807a29a5.htm" />
+  <HelpKINode Title="StringTokenizer.MoveNext method" Url="html/4fce62dd-1f14-5da8-23df-d4abcba5112f.htm" />
+  <HelpKINode Title="StringTokenizer.NextToken method" Url="html/485ca991-104b-dc68-4481-632ea55bb9e0.htm" />
+  <HelpKINode Title="StringTokenizer.Reset method" Url="html/08cbf63e-8512-7b6c-9e69-460f026474b1.htm" />
+  <HelpKINode Title="StringTokenizer.ResetTokenizer method" Url="html/9348a601-ebcb-0136-27e5-882e457eca63.htm" />
+  <HelpKINode Title="StringTokenizer.StringSource property" Url="html/23c6270f-183a-ce1f-bbad-6849c6965838.htm" />
+  <HelpKINode Title="StringTokenizer.StringTokenizer constructor" Url="html/203457e8-99fa-3b39-c1be-38f6c35a0c4e.htm" />
+  <HelpKINode Title="StringTokenizer.TokensToArray method" Url="html/a1355fa4-3ac2-717c-2fbc-af2732bca495.htm" />
+  <HelpKINode Title="StringTokenizer.TokensToList method" Url="html/f6660da5-ced3-5d52-9681-9892462e0e51.htm" />
+  <HelpKINode Title="TokensToArray method" Url="html/a1355fa4-3ac2-717c-2fbc-af2732bca495.htm" />
+  <HelpKINode Title="TokensToList method" Url="html/f6660da5-ced3-5d52-9681-9892462e0e51.htm" />
+</HelpKI>
