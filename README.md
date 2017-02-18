@@ -1,4 +1,4 @@
 # StringTokenizer
-StringTokenizer based on JAVA version
+StringTokenizer based on the JAVA version.
 <br/>
 [Documentation](http://fredekstrand.github.io/StringTokenizer)
