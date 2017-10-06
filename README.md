@@ -1,6 +1,9 @@
 ![Project type](https://github.com/FredEkstrand/ImageFiles/raw/master/CodeIcon.png )
 
 ![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg) ![License MIT](https://img.shields.io/badge/Licence-MIT-blue.svg) 
+[![codecov](https://codecov.io/gh/FredEkstrand/StringTokenizer/branch/master/graph/badge.svg)](https://codecov.io/gh/FredEkstrand/StringTokenizer)
+
+
 
 # Overview
 
@@ -48,5 +51,5 @@ Fred Ekstrand
 email: fredekstrandgithub@gmail.com
 ## Licensing
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
