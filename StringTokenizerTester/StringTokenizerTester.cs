@@ -9,7 +9,7 @@ using System.Collections.Generic;
  */
 namespace StringTokenizerTester
 {
-    [TestFixture]
+    [TestFixture]    
     public class StringTokenizerTester
     {
         private const string DefaultDelimiters = " \t\n\r\f";
@@ -20,6 +20,7 @@ namespace StringTokenizerTester
         #region Constructor Tests
 
         [Test]
+        [Category("Constructors")]
         public void NoStringDefaultDelimiters()
         {
             StringTokenizer st = new StringTokenizer();
@@ -31,6 +32,7 @@ namespace StringTokenizerTester
         }
 
         [Test]
+        [Category("Constructors")]
         public void StringWithDefaultDelimiters()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -41,6 +43,8 @@ namespace StringTokenizerTester
             Assert.AreEqual(false, st.IsReturnDelimiters);
         }
 
+        [Test]
+        [Category("Constructors")]
         public void StringDefaultDelimitersReturnDelimiters()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -48,9 +52,11 @@ namespace StringTokenizerTester
             // initial state checks from constructor call
             Assert.AreEqual(StringSet_1, st.StringSource);
             Assert.AreEqual(DefaultDelimiters, st.Delimiters);
-            Assert.AreEqual(true, st.IsReturnDelimiters);
+            Assert.AreEqual(false, st.IsReturnDelimiters);
         }
 
+        [Test]
+        [Category("Constructors")]
         public void StringCustomDelimitersReturnDelimiters()
         {
             StringTokenizer st = new StringTokenizer(StringSet_3, "*", true);
@@ -61,6 +67,8 @@ namespace StringTokenizerTester
             Assert.AreEqual(true, st.IsReturnDelimiters);
         }
 
+        [Test]
+        [Category("Constructors")]
         public void StringCustomDelimiters()
         {
             StringTokenizer st = new StringTokenizer(StringSet_3, "*");
@@ -76,6 +84,7 @@ namespace StringTokenizerTester
         #region Count Test Sets
 
         [Test]
+        [Category("Count Test Sets")]
         public void CountDefaultDlimiters()
         {
             StringTokenizer st = new StringTokenizer(StringSet_2);
@@ -84,6 +93,8 @@ namespace StringTokenizerTester
 
         }
 
+        [Test]
+        [Category("Count Test Sets")]
         public void CountEmptyStringDefaultDlimiters()
         {
             StringTokenizer st = new StringTokenizer("");
@@ -91,11 +102,13 @@ namespace StringTokenizerTester
             Assert.AreEqual(0, st.Count);
         }
 
+        [Test]
+        [Category("Count Test Sets")]
         public void CountCustomDlimiters()
         {
             StringTokenizer st = new StringTokenizer(StringSet_3, "*");
 
-            Assert.AreEqual(2, st.Count);
+            Assert.AreEqual(12, st.Count);
         }
 
         #endregion
@@ -103,6 +116,7 @@ namespace StringTokenizerTester
         #region NextToken Test Sets
 
         [Test]
+        [Category("NextToken Test Sets")]
         public void NextTokenNoTokens()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -118,6 +132,7 @@ namespace StringTokenizerTester
         }
 
         [Test]
+        [Category("NextToken Test Sets")]
         public void NextTokenCount()
         {
             StringTokenizer st = new StringTokenizer(StringSet_2);
@@ -136,6 +151,7 @@ namespace StringTokenizerTester
         #region HasMoreTokens Test Sets
 
         [Test]
+        [Category("HasMoreTokens Test Sets")]
         public void HasMoreTokenCount()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -155,6 +171,7 @@ namespace StringTokenizerTester
         #region Delimiters Test Sets
 
         [Test]
+        [Category("Delimiters Test Sets")]
         public void DelimitersSetCheck()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -163,6 +180,7 @@ namespace StringTokenizerTester
         }
 
         [Test]
+        [Category("Delimiters Test Sets")]
         public void DelimitersCustomSetCheck()
         {
             StringTokenizer st = new StringTokenizer(StringSet_3);
@@ -173,6 +191,7 @@ namespace StringTokenizerTester
         }
 
         [Test]
+        [Category("Delimiters Test Sets")]
         public void DelimitersCustomTokenizingChangeCheck()
         {
             StringTokenizer st = new StringTokenizer(StringSet_3);
@@ -194,6 +213,7 @@ namespace StringTokenizerTester
         #region Reset Test Sets
 
         [Test]
+        [Category("Reset Test Sets")]
         public void RestBeginningTest()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -203,6 +223,8 @@ namespace StringTokenizerTester
 
         }
 
+        [Test]
+        [Category("Reset Test Sets")]
         public void ResetRandomTest()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -222,6 +244,8 @@ namespace StringTokenizerTester
             Assert.AreEqual(15, count);
         }
 
+        [Test]
+        [Category("Reset Test Sets")]
         public void ResetEndedTest()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -239,6 +263,7 @@ namespace StringTokenizerTester
         #region Token to List Test Sets
 
         [Test]
+        [Category("Token to List Test Sets")]
         public void TokensToListCountTest()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -248,6 +273,7 @@ namespace StringTokenizerTester
         }
 
         [Test]
+        [Category("Token to List Test Sets")]
         public void TokensToListInternalPositionTest()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -264,6 +290,7 @@ namespace StringTokenizerTester
         #region Tokens To String Array Test Sets
 
         [Test]
+        [Category("Tokens To String Array Test Sets")]
         public void TokensToStringArrayCount()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
@@ -275,6 +302,7 @@ namespace StringTokenizerTester
         #region Enumeration Test Sets
 
         [Test]
+        [Category("Enumeration Test Sets")]
         public void EnumerationTokensCount()
         {
             StringTokenizer st = new StringTokenizer(StringSet_1);
