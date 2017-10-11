@@ -1,5 +1,0 @@
-C:\SoftwareProjects\StringTokenizer\bin\Debug\StringTokenizer.dll
-C:\SoftwareProjects\StringTokenizer\bin\Debug\StringTokenizer.pdb
-C:\SoftwareProjects\StringTokenizer\obj\Debug\StringTokenizer.csprojResolveAssemblyReference.cache
-C:\SoftwareProjects\StringTokenizer\obj\Debug\StringTokenizer.dll
-C:\SoftwareProjects\StringTokenizer\obj\Debug\StringTokenizer.pdb
