@@ -26,7 +26,7 @@ You can download the DLL [here](#).
 Once downloaded add a reference to the dll in your Visual Studio project.
 Then in your code file add the following to the collection of using statement.
 ```csharp
-using Ekstrand;
+using Ekstrand.Text;
 ```
 
 ### Documentation
