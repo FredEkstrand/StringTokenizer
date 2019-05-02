@@ -31,50 +31,54 @@ using System.Text;
 namespace Ekstrand.Text
 {
 
+
     /// <summary>
-    /// StringTokenizer equivalent to the JAVA version.
+    /// The String Tokenizer is the equivalent to Java version.
     /// </summary>
     public sealed class StringTokenizer : IEnumerator, IEnumerable
     {
-        #region Class Global variables and objects
 
-        private int m_Position;
-        private string m_String;
-        private int m_Length;
-        private string m_Delimiters;
-        private bool m_ReturnDelimiters;
-        private List<string> m_tokens = new List<string>();
+        #region Fields
+
         private static string m_DefaultDelimiters = " \t\n\r\f";
+        private string m_Delimiters;
+        private int m_Length;
+        private int m_Position;
+        private bool m_ReturnDelimiters;
+        private string m_String;
+        private List<string> m_tokens = new List<string>();
 
-        #endregion
+        #endregion Fields
 
-        #region Constructor
+        #region Constructors
+
         /// <summary>
-        /// Initialize an instance of StringTokenizer
+        /// Constructor to initialize StringTokenizer
         /// </summary>
+        /// <remarks>
+        ///  Use StringSource properties to set string to be tokenized"
+        /// </remarks>
         public StringTokenizer() : this("", m_DefaultDelimiters, false)
         { }
 
         /// <summary>
-        /// Initialize an instance of StringTokenizer with a given string using default delimiters.
+        /// Constructor to initialize StringTokenizer
         /// </summary>
         /// <param name="str">String to be tokenized.</param>
         public StringTokenizer(string str) : this(str, m_DefaultDelimiters, false)
-        {
-        }
+        { }
 
         /// <summary>
-        /// Initialize an instance of StringTokenizer with a given string using defined delimiters.
+        /// Constructor to initialize StringTokenizer
         /// </summary>
         /// <param name="str">String to be tokenized.</param>
         /// <param name="delim">String defined delimiters use to tokenized the given string</param>
         /// <remarks>String delimiters would be evaluate each character as separate delimiters to tokenize a given string.</remarks>
         public StringTokenizer(string str, string delim) : this(str, delim, false)
-        {
-        }
+        { }
 
         /// <summary>
-        /// Initialize an instance of StringTokenizer with a given string, defined string delimiters, and return delimiters
+        /// Constructor to initialize String Tokenizer with defined string delimiters and return delimiters
         /// </summary>
         /// <param name="str">String to be tokenized.</param>
         /// <param name="delim">String defined delimiters use to tokenized the given string</param>
@@ -89,77 +93,17 @@ namespace Ekstrand.Text
             this.m_Position = 0;
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Properties
 
         /// <summary>
-        /// The string to be tokenized
-        /// </summary>
-        public string StringSource
-        {
-            get { return m_String; }
-            set
-            {
-                if (!m_String.Equals(value))
-                {
-                    m_String = value;
-                    ResetTokenizer();
-                }
-            }
-        }
-
-        /// <summary>
-        /// The delimiters to be used to tokenized a string.
-        /// </summary>
-        public string Delimiters
-        {
-            get { return m_Delimiters; }
-            set
-            {
-                m_Delimiters = value;
-            }
-        }
-
-        /// <summary>
-        /// If true, then the delimiter characters are also returned as tokens.
-        /// </summary>
-        public bool IsReturnDelimiters
-        {
-            get
-            {
-                return m_ReturnDelimiters;
-            }
-            private set
-            {
-                m_ReturnDelimiters = value;
-            }
-        }
-
-        /// <summary>
-        /// Tests if there are more tokens available to be returned.
-        /// </summary>
-        /// <returns>Returns true if and only if there is at least one token in the 
-        /// string after the current position otherwise false.</returns>
-        public bool HasMoreTokens
-        {
-            get
-            {
-                if (!m_ReturnDelimiters)
-                {
-                    while (m_Position < m_Length && m_Delimiters.IndexOf(m_String[m_Position]) >= 0)
-                    {
-                        m_Position++;
-                    }
-                }
-                return m_Position < m_Length;
-            }
-        }
-
-        /// <summary>
-        /// The number of tokens that would be generated.
+        /// Calculates the number of tokens that would be generated.
         /// </summary>
         /// <returns>Return the number of calculated tokens that would be generated.</returns>
+        /// <remarks>
+        /// Calculation is based on current position in tokenizing the given string. The current position is not advanced during this operation.
+        /// </remarks>
         public int Count
         {
             get
@@ -210,23 +154,112 @@ namespace Ekstrand.Text
             }
         }
 
-        #endregion
-
-        #region Public Methods
+        /// <summary>
+        /// Replaces the current delimiters with the new given delimiters.
+        /// </summary>
+        /// <remarks>
+        /// The next token generated would be based on the current delimiters.
+        /// </remarks>
+        public string Delimiters
+        {
+            get { return m_Delimiters; }
+            set
+            {
+                m_Delimiters = value;
+            }
+        }
 
         /// <summary>
-        /// The next token from the given string. 
+        /// Tests if there are more tokens available to be returned.
         /// </summary>
+        /// <returns>Returns true if and only if there is at least one token in the 
+        /// string after the current position; false otherwise.</returns>
+        public bool HasMoreTokens
+        {
+            get
+            {
+                if (!m_ReturnDelimiters)
+                {
+                    while (m_Position < m_Length && m_Delimiters.IndexOf(m_String[m_Position]) >= 0)
+                    {
+                        m_Position++;
+                    }
+                }
+                return m_Position < m_Length;
+            }
+        }
+
+        /// <summary>
+        /// If true, then the delimiter characters are also returned as tokens.
+        /// </summary>
+        /// <remarks>Default setting is false. Can be set true only through on of the overloaded constructors.</remarks>
+        public bool IsReturnDelimiters
+        {
+            get
+            {
+                return m_ReturnDelimiters;
+            }
+            private set
+            {
+                m_ReturnDelimiters = value;
+            }
+        }
+
+        /// <summary>
+        /// Replaces the string to be tokenized and reset tokenizer to the beginning.
+        /// </summary>
+        public string StringSource
+        {
+            get { return m_String; }
+            set
+            {
+                if (!m_String.Equals(value))
+                {
+                    m_String = value;
+                    ResetTokenizer();
+                }
+            }
+        }
+
+        #endregion Properties
+
+        #region Methods
+
+
+        /// <summary>
+        /// Returns an enumerator that iterates through a collection (Inherited from IEnumerable).
+        /// </summary>
+        /// <returns>An IEnumerator object that can be used to iterate through the collection.</returns>
+        public IEnumerator GetEnumerator()
+        {
+            return (IEnumerator)this;
+        }
+
+        /// <summary>
+        /// Advances the enumerator to the next element of the collection.(Inherited from IEnumerator.)
+        /// </summary>
+        /// <returns></returns>
+        public bool MoveNext()
+        {
+            return HasMoreTokens;
+        }
+
+        /// <summary>
+        /// Returns the next token from this string tokenizer. 
+        /// </summary>
+        /// <returns>
+        /// The next token from this string tokenizer. 
+        /// </returns>
         public string NextToken()
         {
             return NextTokenInternal();
         }
 
         /// <summary>
-        /// The next token from the given string using the given defined delimiter.
+        /// Returns the next token from this string tokenizer with specified delimiter
         /// </summary>
-        /// <param name="delim">String delimiter to be use to generate this next token and on wards.</param>
-        /// <returns></returns>
+        /// <param name="delim">Specified delimiter to parse for next token.</param>
+        /// <returns>The next token from the given string.</returns>
         public String NextToken(String delim)
         {
             this.m_Delimiters = delim;
@@ -234,18 +267,36 @@ namespace Ekstrand.Text
         }
 
         /// <summary>
-        /// Return an array of tokens based on current set of delimiters.
+        /// Sets the enumerator to its initial position, which is before the first element in the collection.(Inherited from IEnumerator.)
         /// </summary>
-        /// <returns>String array of tokens.</returns>
+        public void Reset()
+        {
+            ResetTokenizer();
+        }
+
+        /// <summary>
+        /// Sets the StringTokenizer to its starting position before tokenizing the given string.
+        /// </summary>
+        public void ResetTokenizer()
+        {
+            m_Position = 0;
+            m_tokens.Clear();
+            Delimiters = m_DefaultDelimiters;
+        }
+
+        /// <summary>
+        /// Return tokens based on current delimiters.
+        /// </summary>
+        /// <returns>String array of tokens based on current delimiters.</returns>
         public string[] TokensToArray()
         {
             return TokensToList().ToArray();
         }
 
         /// <summary>
-        /// Return a list of tokens based on current set of delimiters.
+        /// Return tokens based on current delimiters.
         /// </summary>
-        /// <returns>Return List string tokens.</returns>
+        /// <returns>List of tokens based on current delimiters.</returns>
         public List<string> TokensToList()
         {
             int holdPos = this.m_Position;
@@ -260,50 +311,6 @@ namespace Ekstrand.Text
             return items;
         }
 
-        /// <summary>
-        /// Reset the StringTokenizer to its starting position and set the delimiters to its default values.
-        /// </summary>
-        public void ResetTokenizer()
-        {
-            m_Position = 0;
-            m_tokens.Clear();
-            Delimiters = m_DefaultDelimiters;
-        }
-
-        /// <summary>
-        /// Advances the enumerator to the next element of the collection.(Inherited from IEnumerator.)
-        /// </summary>
-        /// <returns></returns>
-        public bool MoveNext()
-        {
-            return HasMoreTokens;
-        }
-
-        /// <summary>
-        /// Sets the enumerator to its initial position, which is before the first element in the collection.(Inherited from IEnumerator.)
-        /// </summary>
-        public void Reset()
-        {
-            ResetTokenizer();
-        }
-
-        /// <summary>
-        ///  Returns an enumerator that iterates through a collection (Inherited from IEnumerable).
-        /// </summary>
-        /// <returns>Return enumerator.</returns>
-        public IEnumerator GetEnumerator()
-        {
-            return (IEnumerator)this;
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        /// <summary>
-        /// Return the next token based on current delimiters.
-        /// </summary>
-        /// <returns>Return string token.</returns>
         private string NextTokenInternal()
         {
             if (m_Length == 0)
@@ -332,7 +339,7 @@ namespace Ekstrand.Text
             return null;
         }
 
-        #endregion
+        #endregion Methods
 
     }
 }
