@@ -20,17 +20,10 @@ The set of delimiters (the characters that separate tokens) may be specified eit
 * StringTokenizer implements the IEnumerable and IEnumerator interface.
 
 # Getting started
-The souce code and provided DLL is written in C# and targeted for the .Net Framework 4.0 and later. You can download the DLL [here](#).
-Their are two options to obtain the StringTokenizer dll.
-
-### Option 1:
-You can download the DLL [here](#).
-
-### Option 2:
-Download the entire project and compile and add a reference to the dll for use in your project.
+The souce code is written in C# and targeted for the .Net Framework 4.0 and later. Download the entire project and compile.
 
 # Usage
-Once you have the dll add a reference to your Visual Studio project.
+Once you have compiled the project reference the dll in your Visual Studio project.
 Then in your code file add the following to the collection of using statement.
 ```csharp
 using Ekstrand.Text;
