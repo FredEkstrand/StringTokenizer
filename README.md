@@ -35,8 +35,98 @@ Then in your code file add the following to the collection of using statement.
 ```csharp
 using Ekstrand.Text;
 ```
-{ additional code examples please }
 
+String used in the example codes
+```csharp
+private string StringSet_1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id.";
+private string StringSet_2 = "In 2005, Halton Borough Council put up a notice to tell the public about its plans to move a path from one place to another. Quite astonishingly, the notice was a 630 word sentence, which picked up one of our Golden Bull awards that year. Here is it in full.";
+private string StringSet_3 = "Lorem*ipsum*dolor*sit*amet,*consectetur*adipiscing*elit.*Duis*id.\n\r\t*publish!@#$%^&*()";
+```
+##### Some basic examples
+Example: Using StringTokenizer with default delimiters.
+```csharp
+// using default delimiters " \t\n\r\f" to tokenized a given string
+StringTokenizer st = new StringTokenizer(StringSet_1);
+string result = string.Empty;
+
+while (result != null)
+{
+	result = st.NextToken();
+	Console.WriteLine("Token: {0}", result);
+}
+
+// Result
+/*
+Token: Lorem
+Token: ipsum
+Token: dolor
+Token: sit
+Token: amet,
+Token: consectetur
+Token: adipiscing
+Token: elit.
+Token: Duis
+Token: id.
+*/
+```
+Example: Counting tokens.
+```csharp
+StringTokenizer st = new StringTokenizer(StringSet_2);
+Console.WriteLine("Token count: {0}", st.count;
+// result
+/*
+Token count: 50
+*/
+```
+Example: User defined delimiters.
+```csharp
+StringTokenizer st = new StringTokenizer(StringSet_3, "*");
+Console.WriteLine("Token count: {0}", st.count);
+
+while (result != null)
+{
+	result = st.NextToken();
+	Console.WriteLine("Token: {0}", result);
+}
+// Result
+/*
+Token count: 12
+Token: Lorem
+Token: ipsum
+Token: dolor
+Token: sit
+Token: amet,
+Token: consectetur
+Token: adipiscing
+Token: elit.
+Token: Duis
+Token: id.\n\r\t
+Token: publish!@#$%^&
+Token: ()
+*/
+```
+Example: Utilizing HasMoreTokens as a conditional check in a loop.
+```csharp
+StringTokenizer st = new StringTokenizer(StringSet_1);
+
+ while(st.HasMoreTokens)
+ {     
+     Console.WriteLine("Token: {0}", st.NextToken(););
+ }
+ // Result
+ /*
+ Token: Lorem
+ Token: ipsum
+ Token: dolor
+ Token: sit
+ Token: amet,
+ Token: consectetur
+ Token: adipiscing
+ Token: elit.
+ Token: Duis
+ Token: id.
+ */
+```
 # Code Documentation
 MSDN-style code documentation can be found [here](http://fredekstrand.github.io/StringTokenizer).
 
