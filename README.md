@@ -29,7 +29,7 @@ Then in your code file add the following to the collection of using statement.
 using Ekstrand.Text;
 ```
 
-String used in the example codes
+Strings used in the example codes
 ```csharp
 private string StringSet_1 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id.";
 private string StringSet_2 = "In 2005, Halton Borough Council put up a notice to tell the public about its plans to move a path from one place to another. Quite astonishingly, the notice was a 630 word sentence, which picked up one of our Golden Bull awards that year. Here is it in full.";
