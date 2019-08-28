@@ -104,7 +104,7 @@ StringTokenizer st = new StringTokenizer(StringSet_1);
 
  while(st.HasMoreTokens)
  {     
-     Console.WriteLine("Token: {0}", st.NextToken(););
+     Console.WriteLine("Token: {0}", st.NextToken());
  }
  // Result
  /*
@@ -121,7 +121,7 @@ StringTokenizer st = new StringTokenizer(StringSet_1);
  */
 ```
 # Code Documentation
-MSDN-style code documentation can be found [here](http://fredekstrand.github.io/StringTokenizer).
+MSDN-style code documentation can be found [here](http://fredekstrand.github.io/ClassDocStringTokenizer).
 
 
 # History
