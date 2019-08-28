@@ -1,7 +1,8 @@
 # C# StringTokenizer
 
 ![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg) ![License MIT](https://img.shields.io/badge/Licence-MIT-blue.svg)
-[![codecov](https://codecov.io/gh/FredEkstrand/StringTokenizer/branch/master/graph/badge.svg)](https://codecov.io/gh/FredEkstrand/StringTokenizer)
+[![Build status](https://ci.appveyor.com/api/projects/status/uh17x3lf82cpemk2?svg=true)](https://ci.appveyor.com/project/FredEkstrand/enigmabinarycipher-qqw8t)
+
 
 ![image](https://github.com/FredEkstrand/ImageFiles/raw/master/StringTokenizer/Tokenizer_A.png)
 
