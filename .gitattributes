@@ -4,3 +4,5 @@
 # Custom for Visual Studio
 *.cs     diff=csharp
 
+*.md linguist-detectable=false
+*.yml linguist-detectable=false
