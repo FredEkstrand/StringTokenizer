@@ -33,7 +33,7 @@ namespace Ekstrand.Text
 
 
     /// <summary>
-    /// The String Tokenizer is the equivalent to Java version.
+    /// The String Tokenizer is the equivalent to Java version. 
     /// </summary>
     public sealed class StringTokenizer : IEnumerator, IEnumerable
     {
